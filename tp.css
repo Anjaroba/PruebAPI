@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, #f6eef9 0%, #e7d4e7 100%);
+    color: #222;
+}
+
+header {
+    background: #242a40;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 24px;
+    border-bottom: 4px solid #6e57ed;
+}
+
+.cont-imagen img {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+.cont-info {
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 0;
+}
+
+.cont-info h1 {
+    margin: 0;
+    font-size: 1.9rem;
+    letter-spacing: 0.03em;
+}
+
+.cont-info p {
+    margin: 8px 0 0;
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+.centro {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 65vh;
+}
+
+aside {
+    background: #3f2f23;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 240px;
+    padding: 22px;
+    color: #f5eef3;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+aside nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+}
+
+aside nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 14px 16px;
+    border-radius: 14px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+aside nav a:hover {
+    background: #6e57ed;
+    transform: translateX(3px);
+}
+
+main {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 28px;
+    box-shadow: 0 18px 50px rgba(24, 28, 60, 0.08);
+}
+
+.div-central {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: #4c3b67;
+}
+
+.div-central h2 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.div-central p {
+    margin: 0;
+    line-height: 1.8;
+    color: #5a4f6f;
+}
+
+.movie-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.movie-card__poster {
+    width: 320px;
+    border-radius: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.12);
+}
+
+.movie-card__poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.movie-card__details {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.movie-card__title {
+    margin: 0;
+    font-size: 2rem;
+    color: #2e1f53;
+}
+
+.movie-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+}
+
+.movie-card__rating {
+    background: #6e57ed;
+    color: #fff;
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-weight: 700;
+    box-shadow: 0 12px 26px rgba(110, 87, 237, 0.18);
+}
+
+.movie-card__label {
+    margin: 0;
+    font-weight: 700;
+    color: #3f3564;
+}
+
+.movie-card__overview {
+    margin: 0;
+    line-height: 1.8;
+    color: #4d4965;
+}
+
+.game-card__thumb img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-card__details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.game-card__actions {
+    margin-top: 10px;
+}
+
+.game-card__button {
+    display: inline-block;
+    background: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.game-card__button:hover {
+    background: #3b8b3b;
+    transform: translateY(-1px);
+}
+
+.error-message {
+    background: #ffe7e7;
+    color: #811b1b;
+    border: 1px solid #f3c2c2;
+    padding: 18px 22px;
+    border-radius: 16px;
+    max-width: 720px;
+}
+
+footer {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.logo-Pie img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.pie h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #4d4d4d;
+}
+
+@media (max-width: 860px) {
+    .centro {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .movie-card {
+        flex-direction: column;
+    }
+
+    header {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+.div-central h2 {
+    font-size: 2.5rem;
+    color: #6e57ed;
+}
+
+/*SOMBRAS CSS3*/
+
+
+.sombra-neon {
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0ff, 0 0 40px #0ff;
+}
+
+.sombra-3d {
+    color: white;
+    text-shadow: 1px 1px 0 #999, 2px 2px 0 #888, 3px 3px 0 #777, 4px 4px 0 #666;
+}
+
+.sombra-fuego {
+    color: white;
+    text-shadow: 0 -2px 4px #fff, 0 -4px 10px #ff0, 0 -10px 20px #ff8000, 0 -15px 40px #f00;
+}
