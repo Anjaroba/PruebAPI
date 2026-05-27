@@ -1,3 +1,4 @@
+// funcion para la carga de peliculas desde la API themoviedb.org
 async function pelicula() {
     const apiKey = "9cbeffd1413cdbf806e8c4423d3512e6";
     const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es-ES`;
@@ -13,7 +14,8 @@ async function pelicula() {
             throw new Error("No se recibieron resultados de películas.");
         }
 
-        const pelicula = datos.results[0];
+        const indiceAleatorio = Math.floor(Math.random() * datos.results.length);
+        const pelicula = datos.results[indiceAleatorio];
         const rutaImagen = `https://image.tmdb.org/t/p/w500${pelicula.poster_path}`;
         const main = document.querySelector('main');
 
@@ -42,7 +44,7 @@ async function pelicula() {
     }
 }
 
-
+// funcion de carga de juegos freetogame.com
 async function juegoGratis() {
     const url = "https://www.freetogame.com/api/games?sort-by=popularity";
 
@@ -57,7 +59,8 @@ async function juegoGratis() {
             throw new Error("No se recibieron datos de juegos.");
         }
 
-        const juego = datos[0];
+        const indiceAleatorio = Math.floor(Math.random() * datos.length);
+        const juego = datos[indiceAleatorio];
         const main = document.querySelector('main');
 
         main.innerHTML = `
@@ -89,6 +92,7 @@ async function juegoGratis() {
     }
 }
 
+//funcion para volver al inicio
 function volverInicio() {
     const main = document.querySelector('main');
     if (!main) return;
@@ -114,6 +118,7 @@ function volverInicio() {
     cargarFraseAleatoria();
 }
 
+//funcion de frases aleatorias
 function cargarFraseAleatoria() {
     const frases = [
         { texto: "El código funciona, NO LO TOQUES.", clase: "sombra-neon" },
